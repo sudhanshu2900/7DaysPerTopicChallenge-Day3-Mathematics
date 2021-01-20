@@ -1,0 +1,12 @@
+PROBLEM: I/P- N=5 cuts
+         O/P- 16 pieces
+         
+         I/P- N=3 cuts
+         O/P- 7 Pieces
+         
+SOLUTION: 
+
+int maximum_Cuts(int n){
+   	    
+   	    return (n*(n+1))/2+1;
+   	} 
