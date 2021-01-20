@@ -1,0 +1,27 @@
+PROBLEM: I/P- A=5, B=10
+         O/P- 10  5
+         
+         Explain: LCM(5,10)= 10, GCD(5,10)= 5
+         
+SOLUTION:
+
+    long GCD(long long A, long long B){                             //Function for find GCD
+        if(A==0){
+            return B;
+        }
+        else{
+            return GCD(B%A, A);
+        }
+    }
+    
+    long LCM(long long A, long long B){                             //Function for find LCM
+        return (A / GCD(A, B)) * B;
+    }
+    
+    vector<long long> lcmAndGcd(long long A , long long B) {
+        
+        vector<long long> v;
+        v.push_back(LCM(A,B));
+        v.push_back(GCD(A,B));
+        return v;
+    }
